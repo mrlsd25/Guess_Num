@@ -7,15 +7,15 @@ def game_core_v3(number):
     В каждой итерации подстроечное число уменьшается в 2 раза и складывается, либо вычитается из текущего проеверяемого.
     Начинаем угадывать с максимального значения - 100. Стартовое значение подстроеченого числа в два раза меньше. """
     count = 1
-    gues_num = 100
-    add_num = gues_num / 2
+    guess_num = 100
+    add_num = guess_num / 2
 
-    while number != gues_num:
+    while number != guess_num:
         count+=1
-        if number > gues_num:
-            gues_num = gues_num + add_num
+        if number > guess_num:
+            guess_num = guess_num + add_num
         else:
-            gues_num = gues_num - add_num
+            guess_num = guess_num - add_num
 
         #Делим подстроечное число на 2 и округляем до ближайшего четного (банковское округление).
         add_num = round(add_num/2)
